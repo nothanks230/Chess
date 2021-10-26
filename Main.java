@@ -1,9 +1,9 @@
 import java.util.Collection;
 import java.util.Iterator; 
 import java.util.Scanner;
-
+//HELLO AI AM FE
+//git add Main.java
 public class Main implements Support{
-	
 	/* pawn = forward 1
 	 * rook = forward, back, right, left (any amount)
 	 * knight = L
