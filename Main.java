@@ -4,6 +4,7 @@ import java.util.Scanner;
 //HELLO AI AM FE
 //git status
 //git add Main.java
+//stufgg
 //git status
 //git commit -m "fed wrote some silly comments"
 public class Main implements Support{
