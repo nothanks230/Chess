@@ -4,7 +4,6 @@ import java.util.Scanner;
 //HELLO AI AM FE
 //git status
 //git add Main.java
-//stufgg
 //git status
 //git commit -m "fed wrote some silly comments"
 public class Main implements Support{
@@ -472,9 +471,8 @@ public class Main implements Support{
     
     checkLocations(board, upcase);
 
- 
-    
-
+    turn ++;
+    turn();
   }
 	// make a method that checks the row / col and destination row /col 
   // boolean method if anything is out of bounds it should fail 
