@@ -10,9 +10,9 @@ public class King extends Piece implements Support{
     }
 
   public static boolean checkKingMove(int row, int col, int drow, int dcol, boolean upcase){
-
+    //true means that move is valid
     boolean validMove = checkKingMoveDetails(row, col, drow, dcol, upcase);
-
+    
     return validMove;
 
   }
@@ -28,14 +28,14 @@ public class King extends Piece implements Support{
   }
   
   public static boolean checkKingMoveDetails(int row, int col, int drow, int dcol, boolean upcase){
-
+    //true means that move is valid and allowed
     // distance has to be one
     int rowDistance = Math.abs(drow - row);
     int colDistance = Math.abs(dcol - col);
 
     if(rowDistance == 1 || rowDistance == 0){
       if(colDistance == 1 || colDistance == 0){
-      return Threat.isSpotUnderAttack(row, col, drow, dcol, upcase);
+      return Threat.isSpotSafe(row, col, drow, dcol, upcase);
       }
       return false;
     }

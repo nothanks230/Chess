@@ -2,14 +2,17 @@ import java.util.HashSet;
 import java.util.HashMap;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.ArrayList;
 
 public interface Support {
 	
 	Piece [][] board = new Piece[8][8];
+  Piece [][] prevBoard = new Piece[8][8];
 
   // System.out.println(board);
   
 	
+  
 	//String e = new String("");
   // note to future self, define a "null" string value in Piece.java and check for that instead of trying to check for the literal null. Takes slightly more computation time but solves the turning a null into a string problem.
    
@@ -26,7 +29,7 @@ public interface Support {
   HashMap<String, int[]> whiteLocations = new HashMap<String, int[]>();
   HashMap<String, int[]> blackLocations = new HashMap<String, int[]>();
   HashMap<Character, Integer> distHashMap = new HashMap<Character, Integer>();
-
-  
+//TODO: PATH ATTACK FOR MULTIPLE PIECES YOOOOOOOOOOOOO
+  ArrayList<int[]> pathAttack = new ArrayList<int[]>();
 
 }

@@ -1,11 +1,15 @@
 import java.util.Collection;
 import java.util.Iterator; 
 import java.util.Scanner;
-//HELLO AI AM FE
 //git status
 //git add Main.java
 //git status
 //git commit -m "fed wrote some silly comments"
+
+
+
+
+
 public class Main implements Support{
 	/* pawn = forward 1
 	 * rook = forward, back, right, left (any amount)
@@ -42,7 +46,7 @@ public class Main implements Support{
     Queen Q1 = new Queen(0, 3, "Q1", true);
     King K1 = new King(0, 4, "K1", true);
     Bishop B2 = new Bishop(0, 5, "B2", true);
-    Knight H2 = new Knight(0, 6, "H2", true);
+    Knight H2 = new Knight(2, 7, "H2", true);
     Rook R2 = new Rook(0, 7, "R2", true);
 		
 		board[0][0] = R1;
@@ -55,7 +59,7 @@ public class Main implements Support{
 		board[0][7] = R2;
 
     Pawn P1 = new Pawn(1, 0, "P1", true);
-    Pawn P2 = new Pawn(1, 1, "P2", true);
+   // Pawn P2 = new Pawn(1, 1, "P2", true);
     Pawn P3 = new Pawn(1, 2, "P3", true);
     Pawn P4 = new Pawn(1, 3, "P4", true);
     Pawn P5 = new Pawn(1, 4, "P5", true);
@@ -64,11 +68,11 @@ public class Main implements Support{
     Pawn P8 = new Pawn(1, 7, "P8", true);
 		
 		board[1][0] = P1;
-		board[1][1] = P2;
+		//board[1][1] = P2;
 		board[1][2] = P3;
-		board[1][3] = P4;
+		board[2][3] = P4;
 		board[1][4] = P5;
-		board[1][5] = P6;
+    board[1][5] = P6;
 		board[1][6] = P7;
 		board[1][7] = P8;
 		
@@ -76,7 +80,7 @@ public class Main implements Support{
     Pawn p2 = new Pawn(6, 1, "p2", false);
     Pawn p3 = new Pawn(6, 2, "p3", false);
     Pawn p4 = new Pawn(6, 3, "p4", false);
-    Pawn p5 = new Pawn(6, 4, "p5", false);
+    Pawn p5 = new Pawn(3, 5, "p5", false);
     Pawn p6 = new Pawn(6, 5, "p6", false);
     Pawn p7 = new Pawn(6, 6, "p7", false);
     Pawn p8 = new Pawn(6, 7, "p7", false);
@@ -102,11 +106,85 @@ public class Main implements Support{
 		board[7][0] = r1;
 		board[7][1] = h1;
 		board[7][2] = b1;
-		board[7][3] = q1;
+		board[5][0] = q1;
 		board[7][4] = k1;
 		board[7][5] = b2;
 		board[7][6] = h2;
 		board[7][7] = r2;
+
+//Default Board
+
+    // Rook R1 = new Rook(0, 0, "R1", true);
+    // Knight H1 = new Knight(0, 1, "H1", true);
+    // Bishop B1 = new Bishop(0, 2, "B1", true);
+    // Queen Q1 = new Queen(0, 3, "Q1", true);
+    // King K1 = new King(0, 4, "K1", true);
+    // Bishop B2 = new Bishop(0, 5, "B2", true);
+    // Knight H2 = new Knight(0, 6, "H2", true);
+    // Rook R2 = new Rook(0, 7, "R2", true);
+		
+		// board[0][0] = R1;
+		// board[0][1] = H1;
+		// board[0][2] = B1;
+		// board[0][3] = Q1;
+		// board[0][4] = K1;
+		// board[0][5] = B2;
+		// board[0][6] = H2;
+		// board[0][7] = R2;
+
+    // Pawn P1 = new Pawn(1, 0, "P1", true);
+    // Pawn P2 = new Pawn(1, 1, "P2", true);
+    // Pawn P3 = new Pawn(1, 2, "P3", true);
+    // Pawn P4 = new Pawn(1, 3, "P4", true);
+    // Pawn P5 = new Pawn(1, 4, "P5", true);
+    // Pawn P6 = new Pawn(1, 5, "P6", true);
+    // Pawn P7 = new Pawn(1, 6, "P7", true);
+    // Pawn P8 = new Pawn(1, 7, "P8", true);
+		
+		// board[1][0] = P1;
+		// board[1][1] = P2;
+		// board[1][2] = P3;
+		// board[1][3] = P4;
+		// board[1][4] = P5;
+		// board[1][5] = P6;
+		// board[1][6] = P7;
+		// board[1][7] = P8;
+		
+		// Pawn p1 = new Pawn(6, 0, "p1", false);
+    // Pawn p2 = new Pawn(6, 1, "p2", false);
+    // Pawn p3 = new Pawn(6, 2, "p3", false);
+    // Pawn p4 = new Pawn(6, 3, "p4", false);
+    // Pawn p5 = new Pawn(6, 4, "p5", false);
+    // Pawn p6 = new Pawn(6, 5, "p6", false);
+    // Pawn p7 = new Pawn(6, 6, "p7", false);
+    // Pawn p8 = new Pawn(6, 7, "p7", false);
+    
+		// board[6][0] = p1;
+		// board[6][1] = p2;
+		// board[6][2] = p3;
+		// board[6][3] = p4;
+		// board[6][4] = p5;
+		// board[6][5] = p6;
+		// board[6][6] = p7;
+		// board[6][7] = p8;
+
+    // Rook r1 = new Rook(7, 0, "r1", false);
+    // Knight h1 = new Knight(7, 1, "h1", false);
+    // Bishop b1 = new Bishop(7, 2, "b1", false);
+    // Queen q1 = new Queen(7, 3, "q1", false);
+    // King k1 = new King(7, 4, "k1", false);
+    // Bishop b2 = new Bishop(6, 5, "b2", false);
+    // Knight h2 = new Knight(7, 6, "h2", false);
+    // Rook r2 = new Rook(7, 7, "r2", false);
+		
+		// board[7][0] = r1;
+		// board[7][1] = h1;
+		// board[7][2] = b1;
+		// board[7][3] = q1;
+		// board[7][4] = k1;
+		// board[7][5] = b2;
+		// board[7][6] = h2;
+		// board[7][7] = r2;
 		
 		promotionsLow.add('q');
 		promotionsLow.add('b');
@@ -162,7 +240,7 @@ public class Main implements Support{
 		
 	}
 	
-	void display() {
+	void display(Piece [][] board) {
 		for(int i = 0; i < board.length; i++) {
 			System.out.print(" " + i + "  ");
 		}
@@ -185,9 +263,9 @@ public class Main implements Support{
       for(int j = 0; j <= 7; j++){
         if(board[i][j] != null){
           String a = board[i][j].name;
-          if(!upcase){
+          if(!Character.isUpperCase(a.charAt(0))){
             whiteLocations.put(a, new int[] {i, j});
-          } else {
+          } else if (Character.isUpperCase(a.charAt(0))) {
             blackLocations.put(a, new int[] {i, j});
           }
         }
@@ -199,21 +277,56 @@ public class Main implements Support{
   
 	
 	void turn() {
+    //this is stinky code and bad and really the data shouldn't be stored in an interface like it is but we're just tryna test ya feel
+    //we'll fix it someother day  <3 <3 <3
+     
+    for(int i = 0; i <= 7; i++){
+      for(int j = 0; j <= 7; j++){
+        prevBoard[i][j] = board[i][j];
+      }
+    }
+
 		boolean upcase = false;
+    
+    checkLocations(board, upcase);
+    
+    int kingRow;
+    int kingCol;
+
 		if(turn % 2 == 0) {
 			System.out.println();
 			System.out.println("It's white's turn");
       System.out.println("White Team Stats: " + whiteHashMap);
+      kingRow = whiteLocations.get("k1")[0];
+      kingCol = whiteLocations.get("k1")[1];
 		} else {
 			System.out.println();
 			System.out.println("It's black's turn");
       System.out.println("Black Team Stats: " + blackHashMap);
+      kingRow = blackLocations.get("K1")[0];
+      kingCol = blackLocations.get("K1")[1];
 			upcase = true;
 		}
 		System.out.println();
-		display();
+		display(board);
+
+    System.out.println("kingRow = " + kingRow + " kingCol = " + kingCol);
+    
+    if (!Threat.isKingsSpotSafe(kingRow, kingCol, upcase)){
+      System.out.println("Your King is in Check!!");
+      
+      if(Threat.isKingInCheckmate(kingRow, kingCol, upcase)){
+        if(!upcase){
+          System.out.println("\n\n\n\n\n------------------------------------------------------------------------\nwhite's king is in checkmate. the game is over and black has won.\n------------------------------------------------------------------------\n\n\n\n");
+        } else {
+           System.out.println("\n\n\n\n\n------------------------------------------------------------------------\nblack's king is in checkmate. the game is over and white has won.\n------------------------------------------------------------------------\n\n\n\n");
+        }
+        
+        return;
+      }
+    }
 		
-		System.out.print("select the row of the piece you want to move\n");
+		System.out.println("\nselect the row of the piece you want to move\n");
 		
 		Scanner r = new Scanner(System.in);
 		int row = 0;
@@ -224,6 +337,9 @@ public class Main implements Support{
       System.out.println("\n Please press enter to continue.");
       r.nextLine();
 
+      
+    
+      
       turn();
       return;
     }
@@ -393,7 +509,7 @@ public class Main implements Support{
       }
 
       if(piece == 'k' || piece == 'K'){
-
+        //we want to exit the if if we're allowed to move, so checkKingMove is inverted
         if(!King.checkKingMove(row, col, drow, dcol, upcase)){
           if(King.checkCastling(row, col, drow, dcol, upcase)){
             System.out.println("Castling...");
@@ -468,8 +584,11 @@ public class Main implements Support{
 			System.out.println("promotion (yay!)");
 		}
 
-    
-    checkLocations(board, upcase);
+    System.out.println("here is the preivious board");
+    display(prevBoard);
+
+    //System.out.println("here is the current board");
+    //display(board);
 
     turn ++;
     turn();

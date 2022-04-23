@@ -11,13 +11,14 @@ public class Pawn extends Piece implements Support{
     }
     
 
-  	 public static boolean checkPawnMove(int row, int col, int drow, int dcol, boolean upcase) {
-		 boolean moveTest0 = checkPawnMovePlace(row, col, drow, dcol, upcase);
-		 if(moveTest0) {
-			 if(checkPawnMoveDetails(row, col, drow, upcase)) {
-				 return true;
-			 }
-		 }	
+  	public static boolean checkPawnMove(int row, int col, int drow, int dcol, boolean upcase) {
+		boolean moveTest0 = checkPawnMovePlace(row, col, drow, dcol, upcase);
+    // System.out.println("RIGHT HERE LOL RIGHT HERE LOL RIGHT HERE LOL" + moveTest0);
+		if(moveTest0) {
+			if(checkPawnMoveDetails(row, col, drow, upcase)) {
+				return true;
+			}
+		}	
     
 		 
 		if(!upcase) {
@@ -46,43 +47,45 @@ public class Pawn extends Piece implements Support{
     //end of checkPawnMove
 	 }
 
+  
+
    	
-	 public static boolean checkPawnMovePlace(int row, int col, int drow, int dcol, boolean upcase) {
-		 if(upcase){
-			 if(row == 1) {
-				if(dcol == col) {
-					if(drow == row + 2 || drow == row + 1) {
-						return true;
-					}
-				}
-			 } else {
-				if(dcol == col) {
-					if(drow == row + 1) {
-						return true;
-					}
-				}
-			 }
-		 } else if (!upcase) {
-			 if(row == 6) {
-				if(dcol == col) {
-					if(drow == row - 2 || drow == row - 1) {
-						return true;
-					}
-				}
-			 } else {
-				 if(dcol == col) {
-					 if(drow == row - 1) {
-						 return true;
-					 }
-				 }
-			 
-			 }
-			 
-		 }
-		 return false;
-	 }
+	  public static boolean checkPawnMovePlace(int row, int col, int drow, int dcol, boolean upcase) {
+      if(upcase){
+        if(row == 1) {
+          if(dcol == col) {
+            if(drow == row + 2 || drow == row + 1) {
+              return true;
+            }
+          }
+        } else {
+          if(dcol == col) {
+            if(drow == row + 1) {
+              return true;
+            }
+          }
+        }
+      } else if (!upcase) {
+        if(row == 6) {
+          if(dcol == col) {
+            if(drow == row - 2 || drow == row - 1) {
+              return true;
+            }
+          }
+        } else {
+          if(dcol == col) {
+            if(drow == row - 1) {
+              return true;
+            }
+          }
+        
+        }
+        
+      }
+      return false;
+	  }
 	 
-	 public static boolean checkPawnMoveDetails(int row, int col, int drow, boolean upcase) {
+	  public static boolean checkPawnMoveDetails(int row, int col, int drow, boolean upcase) {
 		 if(upcase) {
 			 int dif = drow - row;
 			 if(dif == 2) {
@@ -145,7 +148,26 @@ public class Pawn extends Piece implements Support{
 				}
 			}
 			return false;
-	 }
+	}
 
+  public static boolean checksForKing(int row, int col, int drow, int dcol, boolean upcase){
+    System.out.println("checking for pawn attacks...");
+    System.out.println("king is at " + row + ", " + col);
+    System.out.println("pawn is at " + drow + ", " + dcol);
+    if(!upcase) {
+			if(drow == row - 1 && ((dcol == col - 1) || (dcol == col + 1))){
+        System.out.println("the king can be attacked :o");
+				return true;
+			}
+		}
+		 
+		if(upcase) {
+			if(drow == row + 1 && ((dcol == col - 1) || (dcol == col + 1))){
+        System.out.println("the king can be attacked :o");
+				return true;
+			}
+		}
+    return false;
+  }
   // end of the Pawn class 
 }
